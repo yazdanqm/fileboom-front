@@ -1,0 +1,348 @@
+.myclass {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s all;
+}
+
+.nactiv {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.activ {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.5s all;
+}
+
+.set-transition {
+  opacity: 1 !important;
+  transition: 0.5s all;
+}
+
+.swiper {
+  width: 100%;
+  height: auto;
+}
+
+.single-imgs:first-child {
+  border-radius: 1.563rem 0 0 0;
+}
+
+.single-imgs:last-child {
+  border-radius: 0 0 0 1.563rem;
+}
+
+.desc-list li::before {
+  content: "\2022";
+  color: black;
+  font-weight: bold;
+  font-size: 35px;
+  margin-left: 0.75rem;
+}
+
+@media only screen and (max-width : 768px) {
+  .desc-list li::before {
+    font-size: 25px;
+    margin-left: 0.50rem;
+  }
+}
+
+.bg-imgs::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.bg-imgs::-webkit-scrollbar-track {
+  background-color: transparent;
+  padding: 0 5px;
+  border-radius: 10px;
+}
+
+/* Handle */
+.bg-imgs::-webkit-scrollbar-thumb {
+  background: #d0d0d0;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.bg-imgs::-webkit-scrollbar-thumb:hover {
+  background: #b1b1b1;
+}
+
+/* styles for custom select */
+.select {
+  position: relative;
+  margin-bottom: 15px;
+  font-size: 1.375rem;
+  font-weight: 500;
+}
+
+.select .selectBtn {
+  background: var(--bg1);
+  padding: 14px 20px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: #fafafa;
+  border-radius: 0.938rem;
+  border: 2px solid #ededed;
+}
+
+.select .active-parent {
+  border-bottom: 2px solid transparent;
+  border-radius: 0.938rem 0.938rem 0 0;
+  transition: 0.2s ease;
+}
+
+.myarrow {
+  transition: 0.5s all;
+}
+
+.active-arrow {
+  transform: rotate(180deg);
+}
+
+.select .selectBtn.toggle {
+  border-radius: 3px 3px 0 0;
+}
+
+.select .selectBtn.toggle:after {
+  -webkit-transform: translateY(-50%) rotate(-135deg);
+  transform: translateY(-50%) rotate(-135deg);
+}
+
+.select .selectDropdown {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  border-radius: 0 0 3px 3px;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-transform: scale(1, 0);
+  transform: scale(1, 0);
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+  visibility: hidden;
+  transition: 0.2s ease;
+  background: #fafafa;
+  border-radius: 0 0 0.938rem 0.938rem;
+  border-left: 2px solid #ededed;
+  border-right: 2px solid #ededed;
+  border-bottom: 2px solid #ededed;
+  padding: 10px;
+}
+
+.select .selectDropdown .option {
+  padding: 14px 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.select .selectDropdown .option:hover {
+  background: #f4f4f4;
+  border-radius: 0.625rem;
+}
+
+.select .selectDropdown.toggle {
+  visibility: visible;
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+
+/* styles for social popup */
+.s-popup {
+  position: absolute;
+  left: 50%;
+}
+
+.s-popup {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  top: -150%;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.closing-pop {
+  transition: top 0s 0.2s ease-in-out,
+    opacity 0.2s 0s ease-in-out,
+    transform 0.2s 0s ease-in-out;
+}
+
+.s-popup.show {
+  top: 50%;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+  transition: top 0s 0s ease-in-out,
+    opacity 0.2s 0s ease-in-out,
+    transform 0.2s 0s ease-in-out;
+}
+
+.s-popup :is(header, .icons) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.s-popup header .close, .icons a {
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.s-popup header .close {
+  color: #878787;
+  font-size: 17px;
+  background: #f2f3fb;
+  height: 33px;
+  width: 33px;
+  cursor: pointer;
+}
+
+.s-popup header .close:hover {
+  background: #ebedf9;
+}
+
+.s-popup .content {
+  margin-top: 20px;
+}
+
+.s-popup .icons {
+  margin: 15px 0 20px 0;
+}
+
+.s-popup .content .icons a {
+  height: 50px;
+  width: 50px;
+  font-size: 20px;
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+.s-popup .icons a i {
+  transition: transform 0.3s ease-in-out;
+}
+
+.s-popup .icons a:nth-child(1) {
+  color: red;
+  border-color: #ffcccb;
+}
+
+.s-popup .icons a:nth-child(1):hover {
+  background: red;
+}
+
+.s-popup .icons a:nth-child(2) {
+  color: #46C1F6;
+  border-color: #b6e7fc;
+}
+
+.s-popup .icons a:nth-child(2):hover {
+  background: #46C1F6;
+}
+
+.s-popup .icons a:nth-child(3) {
+  color: #e1306c;
+  border-color: #f5bccf;
+}
+
+.s-popup .icons a:nth-child(3):hover {
+  background: #e1306c;
+}
+
+.s-popup .icons a:nth-child(4) {
+  color: #25D366;
+  border-color: #bef4d2;
+}
+
+.s-popup .icons a:nth-child(4):hover {
+  background: #25D366;
+}
+
+.s-popup .icons a:nth-child(5) {
+  color: #0088cc;
+  border-color: #b3e6ff;
+}
+
+.s-popup .icons a:nth-child(5):hover {
+  background: #0088cc;
+}
+
+.s-popup .icons a:hover {
+  color: #fff;
+  border-color: transparent;
+}
+
+.s-popup .icons a:hover i {
+  transform: scale(1.2);
+}
+
+.boomlogo {
+  transform: scale(1.2);
+}
+
+.set-transition {
+  opacity: 1 !important;
+  transition: 0.5s all;
+  transform: scale(1);
+}
+
+.logo-out {
+  opacity: 0 !important;
+  transform: scale(2);
+}
+
+.mini-gone {
+  bottom: -100px !important;
+  transition: all 0.5s;
+}
+
+.mini-s-gone {
+  bottom: -100px !important;
+  transition: all 0.5s;
+}
+
+.smoothing {
+  transition: 0.5s all;
+}
+
+.logform-in {
+  padding-bottom: 0 !important;
+  transition: 0.5s all;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.logform-out {
+  padding-bottom: 50px !important;
+  transition: 0.5s all;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+.mini-s-in {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: 0.5s all;
+  bottom: 0 !important;
+}
+
+.mob-gone {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s all;
+}

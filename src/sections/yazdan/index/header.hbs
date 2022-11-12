@@ -1,0 +1,203 @@
+
+
+<div class="main-header mt-8" md="px-8 pt-8 mt-0">
+  <section id="header" class="bg-c-milky p-relative" md="pb-30">
+    <div class="container header-inner" lg="" xl="">
+
+
+      {{!-- codes for modal forms --}}
+      <div id="loginForm" class="p-fixed inset-0 bg-c-black bg-alpha-50 z-(9999999) d-flex visibility-hidden pb-14 opacity-0 a-items-center j-content-center px-6">
+
+        <div class="bg-c-white p-relative rounded-(1.563rem) pa-6 w-31.75rem" md="pa-16">
+
+
+          <i id="closeForm" class="ri-close-line text-w-semibold text-180 p-absolute left-10 top-10"></i>
+
+
+          <div class="text-1.625rem text-w-semibold mt-14">
+            <i class="ri-user-3-fill ml-2 text-1.5rem"></i>
+            <span id="formTitle">ورود یا ثبت نام</span>
+          </div>
+
+          <div id="formMsg" class="text-1.375rem text-c-fbgray mt-4">برای ادامه، شماره موبایل خود را وارد کنید</div>
+
+          <form id="telForm1" class="mt-10 p-relative">
+            <div id="formErr" class="text-1rem text-c-#FF0000 p-absolute left-0 top-4"></div>
+            <label class="text-1.25rem text-c-fbgray mb-4 d-block">شماره موبایل</label>
+            <div id="telBg" class="h-4.375rem rounded-(0.938rem) border-1 border-c-lgray d-flex a-items-center p-relative">
+              <div class="p-absolute left-6 pr-4 text-1.375rem border-right-1 border-c-lgray">+98</div>
+              <input id="telNum" value="" class="text-1.375rem h-full w-full outline-none bg-c-transparent text-a-left dir-ltr pl-24 pr-6" maxlength="11" type="tel" />
+            </div>
+            <div class="d-flex j-content-end">
+              <button type="button" id="mobNext" class="button bg-c-black text-c-white d-flex h-3.75rem j-content-center a-items-center !border-0 px-10 mt-5">ادامه</button>
+            </div>
+          </form>
+
+          <form id="telForm2" class="mt-10 p-relative d-none">
+            <div id="formErr2" class="text-1rem text-c-#FF0000 p-absolute left-0 top-4"></div>
+            <label id="prevForm" class="text-1.25rem text-c-fbgray mb-4 d-block w-fit-content">ویرایش شماره</label>
+            <div id="telBg" class="h-4.375rem rounded-(0.938rem) border-1 border-c-lgray d-flex a-items-center p-relative">
+              <input id="codeNum" value="" class="text-1.375rem h-full w-full outline-none bg-c-transparent text-a-left dir-ltr px-6" maxlength="5" type="tel" />
+            </div>
+            <div class="d-flex j-content-end a-items-center p-relative mt-5">
+              <div class="p-absolute right-0 text-1.25rem text-c-fbgray" id="mainCode"><span class="ml-1" id="codeTimer">60</span>ثانیه تا درخواست مجدد</div>
+              <div class="p-absolute right-0 text-1.25rem text-c-black d-none" id="againCode">ارسال مجدد کد</div>
+              <button type="button" id="mobNext2" class="button bg-c-black text-c-white d-flex h-3.75rem j-content-center a-items-center !border-0 px-10 ">ادامه</button>
+            </div>
+          </form>
+
+          <form id="telForm3" class="mt-10 p-relative d-none">
+
+            <div class="p-relative">
+
+              <div id="mailErr" class="text-1rem text-c-#FF0000 p-absolute left-0 top-2"></div>
+              <label class="text-1.25rem text-c-fbgray mb-3 d-block">آدرس ایمیل</label>
+              <div id="mailBg" class="h-4.375rem rounded-(0.938rem) border-1 border-c-lgray d-flex a-items-center p-relative">
+                <input id="myMail" value="" class="text-1.375rem h-full w-full outline-none bg-c-transparent text-a-left dir-ltr px-6 font-mgz" type="email" />
+              </div>
+
+            </div>
+
+            <div class="p-relative mt-6">
+
+              <div id="passErr" class="text-1rem text-c-#FF0000 p-absolute left-0 top-2"></div>
+              <label class="text-1.25rem text-c-fbgray mb-3 d-block">کلمه عبور</label>
+              <div id="passBg" class="h-4.375rem rounded-(0.938rem) border-1 border-c-lgray d-flex a-items-center p-relative">
+                <input id="myPass" value="" class="pr-6 text-1.375rem h-full w-full outline-none bg-c-transparent text-a-left dir-ltr px-6 font-mgz" type="password" />
+                <i id="togglePassword" class="ri-eye-fill p-absolute right-4 text-180 text-c-lgray ts-300" hover="text-c-black"></i>
+              </div>
+
+            </div>
+
+
+            <div class="d-flex j-content-end a-items-center p-relative mt-5">
+              <div id="forgetPass" class="p-absolute right-0 text-1.25rem text-c-fbdark">فراموشی کلمه عبور</div>
+              <button type="button" id="mailNext" class="button bg-c-black text-c-white d-flex h-3.75rem j-content-center a-items-center !border-0 px-10 ">ادامه</button>
+            </div>
+          </form>
+
+
+          <form id="telForm4" class="mt-10 p-relative d-none">
+
+            <div class="p-relative">
+
+              <div id="forgErr" class="text-1rem text-c-#FF0000 p-absolute left-0 top-2"></div>
+              <label class="text-1.25rem text-c-fbgray mb-3 d-block">آدرس ایمیل</label>
+              <div id="mailBg" class="h-4.375rem rounded-(0.938rem) border-1 border-c-lgray d-flex a-items-center p-relative">
+                <input id="myForgMail" value="" class="text-1.375rem h-full w-full outline-none bg-c-transparent text-a-left dir-ltr px-6 font-mgz" type="email" />
+              </div>
+
+            </div>
+
+            <div class="d-flex j-content-end a-items-center p-relative mt-5">
+
+              <button type="button" id="forgNext" class="button bg-c-black text-c-white d-flex h-3.75rem j-content-center a-items-center !border-0 px-10 ">بازیابی کلمه عبور</button>
+            </div>
+          </form>
+
+
+
+          <div class="d-flex j-content-center a-items-center p-relative mt-9">
+            <div class="text-1.25rem text-c-fbgray bg-c-white px-4 z-(1)">یا</div>
+            <div class="h-1px  bg-c-lgray p-absolute inset-x-0"></div>
+          </div>
+
+          <div id="loginWithPass" class="mt-4 h-3.75rem text-1.25rem text-w-medium d-flex j-content-center a-items-center border-1 border-c-black rounded-(0.938rem) ts-300" hover="bg-c-black border-c-transparent text-c-white">ورود با کلمه عبور</div>
+
+          <div id="loginWithMob" class="mt-4 h-3.75rem text-1.25rem text-w-medium d-flex j-content-center a-items-center border-1 border-c-black rounded-(0.938rem) ts-300 d-none" hover="bg-c-black border-c-transparent text-c-white">ورود با رمز یکبار
+            مصرف</div>
+
+
+
+        </div>
+
+      </div>
+
+      <div class="grid cols-12 pt-8">
+
+        <div class="col-6 d-flex a-items-center j-content-start" xl="col-3">
+
+          <i id="openNav" class="ri-menu-3-fill text-260 text-c-primary ml-8 d-none" md="d-inline-block" xl="d-none"></i>
+          <img class="bg-c-milky w-10rem" md="w-12.75rem" src="./img/logo.svg" />
+
+        </div>
+
+        <div id="myNav" class="p-fixed top-0 -right-245px bottom-0 w-245px px-12 pt-12 bg-c-milky border-left-1 border-c-lgray z-(10)" xl="p-static w-auto d-flex a-items-center j-content-center col-6 bg-c-transparent pa-0 border-left-0">
+          <ul class="list-style-none" xl="d-flex j-content-center a-items-center">
+            <li class="fb-text text-1.375rem text-c-fbdark border-1 bg-c-white border-c-lgray rounded-8 py-2 pr-4 mb-4" xl="ml-4 d-inline-block border-0 bg-c-transparent mb-0"><a>صفحه اصلی</a></li>
+            <li class="fb-text text-1.375rem text-c-fbdark border-1 bg-c-white border-c-lgray rounded-8 py-2 pr-4 mb-4" xl="ml-4 d-inline-block border-0 bg-c-transparent mb-0"><a>وبلاگ</a></li>
+            <li class="fb-text text-1.375rem text-c-fbdark border-1 bg-c-white border-c-lgray rounded-8 py-2 pr-4 mb-4" xl="ml-4 d-inline-block border-0 bg-c-transparent mb-0"><a>تماس با ما</a></li>
+            <li class="fb-text text-1.375rem text-c-fbdark border-1 bg-c-white border-c-lgray rounded-8 py-2 pr-4 mb-4" xl="d-inline-block border-0 bg-c-transparent mb-0"><a>راهنمای استفاده</a></li>
+          </ul>
+
+          <div class="d-block border-top-1 border-c-lgray mt-8 pt-6" md="d-none">
+            <div id="openForm2" class="fb-text text-1.375rem text-c-fbdark">ورود</div>
+            <div class="fb-text text-1.375rem text-c-fbdark">پیشخوان</div>
+            <div class="fb-text text-1.375rem text-c-fbdark">سبد خرید</div>
+            <form class="border-top-1 border-c-lgray mt-8 pt-6">
+              <input class="h-(3.75rem) w-full bg-c-lgray rounded-(0.938rem) px-4 outline-none" type="text" placeholder="جستجو" />
+              <button class="button w-full mt-2">جستجو کن</button>
+            </form>
+          </div>
+
+        </div>
+
+        <div class="d-none" md="col-6 col-6 d-flex a-items-center j-content-end z-(2)" xl="col-3">
+          <div class="p-relative">
+            <a id="openForm" class="text-1.375rem text-c-fbdark transition ts-200 ml-6" hover="text-c-primary">ورود</a>
+            <button class="button ml-2">پیشخوان</button>
+            <button class="r-button ml-2"><i class="ri-shopping-basket-2-line"></i></button>
+            <button id="searchClick" class="r-button"><i class="ri-search-line"></i></button>
+
+            <form id="searchInp" class="r-button d-inline-flex p-absolute left-0 right-0 w-auto a-items-center nactiv" hover="bg-c-white border-1 border-c-lgray">
+              <button class="bg-c-transparent p-absolute left-4 trr" type="submit"><i class="ri-search-line"></i></button>
+              <input class="w-full outline-none pr-4 text-100" type="text" placeholder="دنبال چی میگردی ؟" />
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+      <div id="fake" class="h-(132px) mt-36" i-md="!d-none" md="d-none"></div>
+      <div id="myMenu" class="d-none border-1 border-c-lgray rounded-(1.563rem) w-(fit-content) mx-auto mt-36 pa-2.188rem z-(4) fixed-content filter-card transition ts-600" md="d-block">
+        <ul class="dachik list-style-none d-flex j-content-center a-items-center" children-li="d-inline-block text-2rem text-c-fbdark text-w-medium">
+          <li class="fb-text ml-8"><a href="#mockup">موکاپ لایه باز</a></li>
+          <li class="fb-text ml-8"><a href="#plugin">افزونه</a></li>
+          <li class="fb-text ml-8"><a href="#fafonts">فونت فارسی</a></li>
+          <li class="fb-text ml-12"><a href="#enfonts">فونت لاتین</a></li>
+          <li class="fb-text"><button id="closeBtn" class="r-button text-200"><i class="ri-close-line"></i></button></li>
+        </ul>
+      </div>
+
+
+      <div class="swiper mySwiper8 border-2 border-c-lgray rounded-1.500rem px-12 py-8 bg-c-white mt-8 d-grid j-content-center" md="d-none">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide !w-auto dachik list-style-none d-flex j-content-center a-items-center" children-div="d-inline-block text-c-fbdark text-w-semibold">
+            <div class="fb-text text-145"><a href="#mockup">موکاپ لایه باز</a></div>
+          </div>
+          <div class="swiper-slide !w-auto dachik list-style-none d-flex j-content-center a-items-center" children-div="d-inline-block text-c-fbdark text-w-semibold">
+            <div class="fb-text text-145"><a href="#plugin">افزونه</a></div>
+          </div>
+          <div class="swiper-slide !w-auto dachik list-style-none d-flex j-content-center a-items-center" children-div="d-inline-block text-c-fbdark text-w-semibold">
+            <div class="fb-text text-145"><a href="#fafonts">فونت فارسی</a></div>
+          </div>
+          <div class="swiper-slide !w-auto dachik list-style-none d-flex j-content-center a-items-center" children-div="d-inline-block text-c-fbdark text-w-semibold">
+            <div class="fb-text text-145"><a href="#enfonts">فونت لاتین</a></div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+    </div>
+    <div class=":background-(linear-gradient(180deg,transparent,#FAFAFA)) p-absolute inset-x-0 bottom-0 h-40 z-(0) d-none" md="d-block"></div>
+  </section>
+</div>

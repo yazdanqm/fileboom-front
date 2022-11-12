@@ -1,0 +1,20 @@
+{
+  "name": "@mojofw/mojo",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Mojo framework team. mojofw.com",
+  "license": "MIT",
+  "dependencies": {
+    "terser-webpack-plugin": "^5.3.0",
+    "uglify-js": "^3.14.5"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.2.133",
+    "esbuild": "^0.14.13",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0"
+  },
+  "type": "module"
+}
